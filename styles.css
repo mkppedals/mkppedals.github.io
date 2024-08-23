@@ -1,0 +1,92 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Solid black background */
+    overflow: hidden; /* Prevent scrollbars during animation */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Start from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+.coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white; /* White text */
+    position: relative;
+    animation: fadeIn 2s ease-in forwards; /* Apply fade-in animation */
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    margin-bottom: 20px; /* Space between text and logo */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s ease-in forwards; /* Fade in effect */
+}
+
+.logo {
+    width: 300px; /* Adjust size as necessary */
+    height: auto; /* Maintain aspect ratio */
+    filter: invert(1); /* Invert the color of the logo */
+    margin-bottom: 20px; /* Space between logo and slogan */
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s ease-in forwards; /* Fade in with delay */
+}
+
+.slogan {
+    font-family: 'Dancing Script', cursive; /* Apply the cursive font */
+    font-size: 3rem; /* Adjust size as necessary */
+    color: white; /* Ensure slogan is visible */
+    margin: 0; /* Remove default margin */
+    animation: slideIn 2s ease-in forwards; /* Slide and fade in with delay */
+}
+
+/* Style for social media icons container */
+.social-media {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    margin-top: 20px; /* Space between slogan and icons */
+    animation: slideIn 2s ease-in forwards; /* Slide and fade in with delay */
+}
+
+/* Style for each social media icon */
+.social-icon {
+    color: white; /* White icons */
+    font-size: 2rem; /* Adjust size as necessary */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.social-icon:hover {
+    color: #f39c12; /* Color change on hover, adjust as necessary */
+}
